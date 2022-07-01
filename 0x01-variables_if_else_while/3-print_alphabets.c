@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <chtype.h>
 
 /**
  *  main - program that prints the alphabet in lowercase,
