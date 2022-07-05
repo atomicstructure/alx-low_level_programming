@@ -1,11 +1,10 @@
-#include <main.h>
+#include <unistd.h>
 /**
  * main - Write a program that prints _putchar, followed by a new line.
  *
  * Return: always 0 (Success)
  */
-int main(void)
+int _putchar(char c)
 {
-	printf("_putchar\n");
-	return (0);
+	return (write(1, &c, 1));
 }
