@@ -5,7 +5,7 @@
  * Return: 0 (Success)
  */
 
-void printputchar(void)
+int main(void)
 {
 	_putchar('p');
 	_putchar('u');
@@ -15,4 +15,6 @@ void printputchar(void)
 	_putchar('a');
 	_putchar('r');
 	_putchar('\n');
+
+	return (0);
 }
