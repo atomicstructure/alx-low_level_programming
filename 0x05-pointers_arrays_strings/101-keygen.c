@@ -1,27 +1,31 @@
-#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 /**
- * main - Password generator.
- *
- * Return: Always 0.
+ * main - generates keygen
+ * Return: 0
  */
 int main(void)
 {
-	char seed[53] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	char password[22];
-	int i, n, passw, complem;
+	 int pass[100];
+	 int i, sum, n;
 
-	srand(time(NULL));
-	for (i = 0; passw < 2772; i++)
-	{
-	n = rand() % 10;
-	password[i] = seed[n];
-	passw += password[i];
+	 sum = 0;
+
+	 srand(time(NULL));
+
+	 for (i = 0; i < 100; i++)
+	 {
+		 pass[i] = rand() % 78;
+		 sum += (pass[i] + '0');
+		 putchar(pass[i] + '0');
+		 if ((2772 - sum) - '0' < 78)
+		 {
+			 n = 2772 - sum - '0';
+			 sum += n;
+			 putchar(n + '0');
+			 break;
+		}
 	}
-	complem = 2772 - passw;
-	password[i] = complem;
-	printf("%s\n",  password);
 	return (0);
 }
