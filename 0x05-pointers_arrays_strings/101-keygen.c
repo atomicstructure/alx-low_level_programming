@@ -13,7 +13,7 @@ int main(void)
 	char password[22];
 	int i, n, passw, complem;
 
-	srand(time(0));
+	srand(time(NULL));
 	for (i = 0; passw < 2772; i++)
 	{
 	n = rand() % 10;
