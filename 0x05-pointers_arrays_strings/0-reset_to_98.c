@@ -6,16 +6,13 @@
  *
  * the value it points to to 98
  *
- * @n: pointer to an int
+ * @n: pointer to an int to be updated
  *
  * Return: Nothing
  *
  */
 
-
-
 void reset_to_98(int *n)
 {
-
 	*n = 98;
 }
