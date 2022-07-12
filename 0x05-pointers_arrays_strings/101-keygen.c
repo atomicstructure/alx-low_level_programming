@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <time.h>
 /**
- * main - check the code for Holberton School students.
+ * main - Password generator.
  *
  * Return: Always 0.
  */
