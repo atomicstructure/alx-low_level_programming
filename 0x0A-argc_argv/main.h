@@ -3,6 +3,7 @@
 
 int _putchar(char c);
 int main(int argc, char *argv[]);
-int coinConverter(int i);
+int coin_calc(int cents);
+int main(int argc, char **argv);
 
 #endif
