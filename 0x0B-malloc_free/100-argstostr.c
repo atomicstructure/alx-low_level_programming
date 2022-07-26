@@ -41,4 +41,5 @@ char *argstostr(int ac, char **av)
 
 	str[size] = '\0';
 
-	return (str);}
+	return (str);
+}
