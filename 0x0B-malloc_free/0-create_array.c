@@ -1,4 +1,5 @@
 #include "main.h"
+
 #include <stdlib.h>
 
 /**
@@ -19,7 +20,7 @@ char *create_array(unsigned int size, char c)
 		return (NULL);
 	if (ar == NULL)
 		return (NULL);
-	while (i < size)
+	while (i < size) 
 	{
 		ar[i] = c;
 		i += 1;
