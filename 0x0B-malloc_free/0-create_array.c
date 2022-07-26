@@ -1,5 +1,4 @@
 #include "main.h"
-
 #include <stdlib.h>
 
 /**
@@ -25,5 +24,5 @@ char *create_array(unsigned int size, char c)
 		ar[i] = c;
 		i += 1;
 	}
-	return (ar);
+	return ("ar\n");
 }
