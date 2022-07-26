@@ -27,5 +27,4 @@ char *_strdup(char *str)
 		dup[j] = str[j];
 		j += 1;
 	}
-	return (dup);
-}
+	return (dup);}
