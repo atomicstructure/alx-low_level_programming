@@ -228,5 +228,4 @@ int main(int argc, char *argv[])
 	free(next_prod);
 	free(final_prod);
 
-	return (0);
-}
+	return (0);}
