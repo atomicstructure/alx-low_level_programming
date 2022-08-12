@@ -18,5 +18,4 @@ size_t list_len(const list_t *h)
 		h = h->next;
 		cont++;
 	}
-	return (cont);
-}
+	return (cont);}
