@@ -1,49 +1,52 @@
-#include <stdlib.h>
-#include <stdio.h>
 #include "lists.h"
-#include <string.h>
+
+int _strlen_recursion(char *s);
 
 /**
- * add_node_end - function that adds a new node at the end of a list_t list
- * @head: input header pointer
- * @str: Input string value
- * Return: the address of the new element, or NULL if it failed
- */
-
+ * add_node_end - adds a new node at the end of a list_t list.
+ * @head: pointer to the first element of the list.
+ * @str: string to set in the new node.
+ * Return: address of the new element, or NULL if it failed
+ **/
 list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *node;
-	list_t *tmp;
+	list_t *new, *aux = *head;
 
-	node = malloc(sizeof(list_t));
-	if (node == NULL)
-		return (NULL);
-	node->len = _strlen(str);
-	node->str = strdup(str);
-	node->next = NULL;
-	if (*head == NULL)
-		*head = node;
-	else
+	new = malloc(sizeof(list_t));
+	if (new == NULL)
 	{
-		tmp = *head;
-		while (tmp->next != NULL)
-			tmp = tmp->next;
-		tmp->next = node;
+		return (NULL);
 	}
-	return (node);
+	new->str = strdup(str);
+	if (!new->str)
+	{
+		free(new);
+		return (NULL);
+	}
+	new->len = _strlen_recursion(new->str);
+	new->next = NULL;
+
+	if (aux)
+	{
+		while (aux->next)
+			aux = aux->next;
+		aux->next = new;
+	}
+	else
+		*head = new;
+
+	return (new);
 }
 
 /**
- * _strlen - returns length of string
- * @s: character of string
- * Return: length of string
+ * _strlen_recursion - returns the length of a string.
+ * @s: string.
+ * Return: length of @s.
  */
-
-int _strlen(const char *s)
+int _strlen_recursion(char *s)
 {
-	int i;
-
-	while (s[i] != 0)
-		i++;
-	return (i);
+	if (*s == 0)
+		return (0);
+	else
+		return (1 + _strlen_recursion(s + 1));
 }
