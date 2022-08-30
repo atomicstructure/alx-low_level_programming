@@ -312,3 +312,5 @@ void print_class(unsigned char *e_ident)
 	switch (e_ident[EI_CLASS])
 	{
 	case ELFCL
+	}
+}
